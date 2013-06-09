@@ -1,7 +1,7 @@
-\documentclass[svgnames,hyperref, english, xcolor=dvipsnames,usenames]{beamer}		        % version standard
-%\documentclass[svgnames,hyperref, english, xcolor=dvipsnames,usenames,handout]{beamer}       % version imprimable pour assistance%
+\documentclass[svgnames,hyperref, english, xcolor=dvipsnames,usenames]{beamer}					      % version standard
+%\documentclass[svgnames,hyperref, english, xcolor=dvipsnames,usenames,handout]{beamer}       		  % version imprimable pour assistance%
 %\documentclass[svgnames,hyperref, english, xcolor=dvipsnames,usenames,handout,notes=show]{beamer}    % version imprimable avec notes d’orateur
-%\documentclass[svgnames,hyperref, english, xcolor=dvipsnames,usenames,notes=only]{beamer}    % version imprimable avec notes d’orateur
+%\documentclass[svgnames,hyperref, english, xcolor=dvipsnames,usenames,notes=only]{beamer}    		  % version imprimable avec notes d’orateur
 \mode<presentation>
 {
         \usepackage{beamerthemesplit}
@@ -87,48 +87,49 @@
 
 \frame
 {
-        \frametitle{Des besoins identifiés}
+        \frametitle{Identified needs}
 
         \begin{alertblock}{Motivation}
-                Comment \textbf{gérer} et \textbf{évaluer} \textbf{efficacement} les travaux rendus par les étudiants en TP/Projet ?
+                How to manage and evaluate the work performed by students in projects or in practical work?
         \end{alertblock}
 
-        \begin{block}{Usage de MarkUs}
+        \begin{block}{Use}
                 \begin{itemize}
-                        \item Déployé à Nantes depuis septembre 2010
-                        \item Participation au développement depuis l'été 2009
-                        \item Terrains d'utilisation
+                        \item Deployed at the École Centrale de Nantes since september 2010
+                        \item Centrale Nantes is contributing to the development of MarkUs since summer 2009
+                        \item MarkUs is used in
                                 \begin{itemize}
-                                        \item Enseignements d'informatique (rapport et code)
-                                        \item Promotions de plus de 350 étudiants
-                                        \item Plus de 20 enseignants impactés
+                                        \item Teaching computer science (reports and source code)
+                                        \item Class of more than 350 students
+                                        \item More than 20 teachers impacted
                                 \end{itemize}
                 \end{itemize}
         \end{block}
 }
 
-\section{Contexte}
+
+\section{Context}
 
 \subsection*{Motivation}
 
 \frame
 {
-        \frametitle{Limites des dispositifs traditionnels}
+        \frametitle{Limitations of classic way to handle practical work}
 
-        \begin{alertblock}{Du côté des enseignants}
+        \begin{alertblock}{Teachers side}
                 \begin{itemize}
-                        \item Gros \textbf{volume} de soumissions à traiter (plusieurs centaines par TP)
-                        \item Difficulté d'\textbf{harmonisation} des facteurs de correction d'un chargé de TD/TP à l'autre
-                        \item Gestion papier
+                        \item Important \textbf{number} of submissions to handle (hundreds by practical work)
+                        \item Difficulty of harmonizing correction factors between graders
+                        \item Paper handling
                                 \begin{itemize}
-                                        \item Amoncellement de piles
-                                        \item Retour des dossiers aux étudiants
+                                        \item Accumulation of papers containing source code
+                                        \item Giving back papers to students
                                 \end{itemize}
-                        \item Gestion par courriels
+                        \item Email handling
                                 \begin{itemize}
-                                        \item Erreurs dans le destinataire
-                                        \item Archives .zip illisibles
-                                        \item Lourdeurs
+                                        \item Mistakes in the grader's name
+                                        \item Zip archives not readable
+                                        \item Not a smooth process
                                 \end{itemize}
                 \end{itemize}
         \end{alertblock}
@@ -136,44 +137,23 @@
 
 \frame
 {
-        \frametitle{Limites des dispositifs traditionnels}
+        \frametitle{Limitations of classic way to handle practical work}
 
-        \begin{alertblock}{Du côté des étudiants}
+        \begin{alertblock}{Students side}
                 \begin{itemize}
-                        \item Difficulté pour \textbf{récupérer/consulter} ses travaux corrigés
-                        \item Gestion papier
+                        \item Difficulty to have \textbf{feedback} on his work
+                        \item Paper handling
                                 \begin{itemize}
-                                        \item Perte de rapports
-                                        \item \textbf{Partage} de la copie avec son binôme ?
+                                        \item Loss of reports
+                                        \item How to \textbf{share} correction with his co-worker?
                                 \end{itemize}
-                        \item Gestion par courriels
+                        \item Email handling
                                 \begin{itemize}
-                                        \item Erreurs dans le destinataire
-                                        \item Un courriel parmi d'autres
+                                        \item Mistakes in student's names
+                                        \item An email among others
                                 \end{itemize}
                 \end{itemize}
         \end{alertblock}
-}
-
-\subsection*{Centrale Nantes et le logiciel libre}
-
-\frame
-{
-        \frametitle{Un intérêt de longue date}
-
-        \begin{block}{En termes d'utilisation}
-                \begin{itemize}
-                        \item Incitation à utiliser GNU/Linux
-                        \item Promotion de OpenOffice.org, Firefox, etc.
-                \end{itemize}
-        \end{block}
-
-        \begin{block}{En termes de développement}
-                \begin{itemize}
-                        \item Logiciels pour la recherche
-                        \item Collaboration autour de OpenOffice.org (depuis 2008)
-                \end{itemize}
-        \end{block}
 }
 
 \subsection*{MarkUs}
@@ -181,42 +161,43 @@
 % Quelques mots de présentation historique autour de MarkUs
 
 \frame{
-        \frametitle{MarkUs, un outil de correction en ligne de travaux étudiant}
-        \begin{block}{MarkUs ? Mark us !}
-                MarkUs est :
+        \frametitle{MarkUs, an online marking tool}
+        \begin{block}{MarkUs? Mark us!}
+                MarkUs is:
                 \begin{itemize}
-                        \item Application \textbf{Web}
-                        \item Destiné à l'évaluation de projet informatique
-                        \item Dépôt \textbf{versionné} des travaux des étudiants
-                        \item \textbf{Annotation directe} des documents par les enseignants
-                        \item Diminution du \textbf{temps} de correction
+                        \item a \textbf{web} application
+                        \item Aimed at \textbf{grading assignments} in computer science
+                        \item \textbf{Versioned} repository of student's work
+                        \item \textbf{Direct annotation} of documents by teachers
+                        \item Reduced \textbf{time} of correction
                 \end{itemize}
         \end{block}
 }
 
 \frame{
-        \frametitle{Organisation autour de MarkUs}
-        \begin{block}{L'équipe de MarkUs}
-                Karen Reid, enseignante à l'Université de Toronto, responsable de l'équipe
+        \frametitle{Organization around MarkUs}
+        
+        \begin{block}{MarkUs team}
+                Karen Reid, senior lecturer at the University of Toronto, team leader\\
+                Morgan Magnin, associate professor at the École Centrale de Nantes, managing french student projects
                 \begin{itemize}
-                        \item 4 développeurs principaux
-                        \item Équipe trimestrielle d'étudiants (Canadiens et Français)
-                        \item \textit{Turnover} rapide des développeurs
-                        \item Difficulté pour maintenir une équipe stable qui comprenne la
-                                totalité du code
-                        \item Projet non communautaire, dirigé par les demandes des clients
-                                et les projets étudiants
+                        \item 4 core developers
+                        \item  Quarterly team of students
+                        		(Canadian and French)
+                        \item Several Universities are using MarkUs
+                        	  	(Canadian and French)
+                        \item Collaborative development on Github
                 \end{itemize}
         \end{block}
 }
 
 \frame{
-        \frametitle{Quelques fonctionnalités}
+        \frametitle{Some features}
 
-        \begin{block}{Amélioration de l'enseignement (correcteur)}
-                Possibilité d'\textbf{annoter}
+        \begin{block}{Improving teaching (grader)}
+                Possibility to \textbf{annotate}
                 \begin{itemize}
-                        \item Code source (avec coloration syntaxique)
+                        \item Source code (with syntax highlighting)
                         \item Images
                         \item PDF
                 \end{itemize}
@@ -227,20 +208,21 @@
                                         \includegraphics[width=\textwidth]{images/markus-annotations.png}
                                 }
                                 %
-                                \caption{Vue du correcteur}
+                                \caption{Grader view}
                         \end{center}
                 \end{figure}
         \end{block}
 }
 
 \frame{
-        \frametitle{Quelques fonctionnalités}
+        \frametitle{Some features}
 
-        \begin{block}{Amélioration de l'enseignement (correcteur)}
+        \begin{block}{Improving teaching (grader)}
                 \begin{itemize}
-                        \item Critères \textbf{fixes} d'évaluation
-                        \item Annotations (code source, images et pdf)
-                        \item Plusieurs correcteurs pour une copie
+                        \item \textbf{Fixed} assessment criteria
+                        \item Annotations (source code, images and PDF)
+                        \item More than one grader on a paper
+                        \item Grader management by criteria
                 \end{itemize}
                 \vspace{-1em}
                 \begin{figure}
@@ -249,33 +231,37 @@
                                         \includegraphics[width=\textwidth]{images/markus-criteres.png}
                                 }
                                 %
-                                \caption{Détermination de critères}
+                                \caption{Set of criteria}
                         \end{center}
                 \end{figure}
         \end{block}
 }
 
 \frame{
-        \frametitle{Quelques autres fonctionnalités}
+        \frametitle{Some features}
 
-        \begin{block}{Amélioration de l'enseignement (correcteur)}
+        \begin{block}{Improving teaching (grader)}
                 \begin{itemize}
-                        \item Prise en charge de plusieurs TP, dans l'idée d'une instance de MarkUs par matière
-                        \item Gestion des \textbf{échéances} avec pénalités de retard (configurables)
-                        \item Possibilité de voir et corriger une \textbf{ancienne} version
+                        \item Handling many practical work, with one instance of MarkUs per course
+                        \item Managing \textbf{deadlines} with configurable penalties
+                        \item Possibility to see and grade a \textbf{former} version
                 \end{itemize}
         \end{block}
 }
 
 \frame{
-        \frametitle{Quelques fonctionnalités}
+        \frametitle{Some features}
 
-        \begin{block}{Amélioration de l'enseignement (élève)}
+        \begin{block}{Improving teaching (student)}
                 \begin{itemize}
-                        \item Constitution des groupes \textbf{en fonction des TP}
-                        \item Export des commentaires
-                        \item Retour amélioré et plus rapide
-                        \item Possibilité de revoir les commentaires
+                        \item Creating groups \textbf{for each practical work}
+                        \item \textbf{Exporting} annotations
+                        \item Better and faster feedback
+                        \item Possibility to read annotations until the evaluation
+                		%%%%%%%
+                		% TODO: faire un point sur les remark requets
+                		%%%%%%%                        
+                        \item Can create \textbf{remark request}
                 \end{itemize}
                 \vspace{-1em}
                 \begin{figure}
@@ -283,90 +269,92 @@
                                 \scalebox{0.55}{
                                         \includegraphics[width=\textwidth]{images/markus-commentaires.png}
                                 }
-                                %
-                                \caption{Vue des résultats par les étudiants}
+                                \caption{Result view for students}
                         \end{center}
                 \end{figure}
         \end{block}
 }
 
-\subsection*{Démonstration}
+\frame{
+        \frametitle{Some features}
+
+        \begin{exampleblock}{\emph{Release} of MarkUs 1.0}
+                \begin{itemize}
+                	\item Compatibility Ruby 1.9.3 and Ruby on Rails 3.x
+                	\item \textbf{Sections} inside of a class
+                	\item Conversion of PDF \textbf{instantaneous}
+                	%%%%%%%
+                	% TODO: faire un point sur les remark requets
+                	%%%%%%%
+                	\item Added \textbf{remark requests}
+                	\item \textbf{New dashboard} for admin
+                \end{itemize}
+%                \vspace{-1em}
+%                \begin{figure}
+%                        \begin{center}
+%                                \scalebox{0.55}{
+%                                        \includegraphics[width=\textwidth]{images/markus-commentaires.png}
+%                                }
+%                                \caption{Vue des résultats par les étudiants}
+%                        \end{center}
+%                \end{figure}
+        \end{exampleblock}
+}
+
+\subsection*{Demonstration}
 
 \frame{
-        \frametitle{Démo}
-        Et si nous passions à une petite illustration pratique…
+        \frametitle{Demo}
+        And what about seeing MarkUs in action?
 }
 
 
-\section{Impact sur l'enseignement et l'apprentissage}
+
+\section{Impact on teaching and learning}
 
 % Cette partie pour donner un aperçu des fonctionnalités de MarkUs et leur impact sur l'enseignement
 
-\subsection*{Avantages pour les enseignants}
+\subsection*{Benefits for teachers}
 
 \frame{
-        \frametitle{Pourquoi MarkUs séduit les enseignants}
+        \frametitle{Why MarkUs seduces teachers?}
         \begin{itemize}
-                \item Gestion de \textbf{gros volumes} (promotions de 370 étudiants)
-                \item Gestion \textbf{centralisée} des documents
-                \item \textbf{Diminution du temps} de correction (environ 50\%)
-                \item \textbf{Dématérialisation}
-                \item Accès \textbf{nomade}
+                \item Managing \textbf{large volumes}
+                \item \textbf{Centralized} document management
+                \item \textbf{Reduced time} for grading (around 50\%)
+                \item \textbf{Paperless}
+                \item \textbf{Mobile} access
         \end{itemize}
 }
 
-\subsection*{Avantages pour les étudiants}
+\subsection*{Benefits for students}
 
 \frame{
-        \frametitle{Pourquoi MarkUs séduit les étudiants}
+        \frametitle{Why MarkUs seduces students?}
         \begin{itemize}
-                \item Une \textbf{unique} plate-forme de soumission et de correction
-                \item Accès \textbf{permanent} aux anciens travaux annotés par les enseignants
-                \item Amélioration du \textbf{délai} d'obtention de la correction
+                \item \textbf{Unique} platform to submit and get feedback for practical work
+                \item \textbf{Permanent} access to former work graded by teachers
+                \item Improved \textbf{time} for obtaining the correction
         \end{itemize}
 }
 
-\section{Le déploiement à Centrale Nantes}
+\subsection*{Use at Centrale Nantes}
 
 \frame{
-        \frametitle{Autour de MarkUs}
-        \begin{block}{Modalités pratiques}
+        \frametitle{At Centrale Nantes}
+        
+        \begin{block}{Deployment of MarkUs for computer science courses}
                 \begin{itemize}
-                        \item Écrit en Ruby, avec Ruby on Rails
-                        \item Documents sauvegardés via Subversion
-                        \item Accès via l'application web
-                        \item Utilisateurs avancés : accès CLI via une API REST
-                \end{itemize}
-        \end{block}
-}
-
-\subsection*{Utilisation à Centrale Nantes}
-
-\frame{
-        \frametitle{Du côté de Centrale Nantes}
-        \begin{block}{Des projets étudiants contribuant au développement}
-                \begin{itemize}
-                        \item 4 projets, 12 étudiants
-                        \item Depuis janvier 2010
-                        \item Cf. intervention RMLL du 11 juillet
-                \end{itemize}
-        \end{block}
-}
-
-\frame{
-        \frametitle{Du côté de Centrale Nantes}
-        \begin{block}{Déploiement du logiciel pour les cours d'informatique}
-                \begin{itemize}
-                        \item Depuis septembre 2010
-                        \item Interconnecté avec \textbf{LDAP}
-                        \item Utilisé en 1ère et 2e année :
+                        \item Since September 2010
+                        \item Connected to \textbf{LDAP}
+                        \item Used in first and second year:
                                 \begin{itemize}
-                                        \item 370 et 340 étudiants impactés
-                                        \item 21 enseignants concernés
+                                        \item 370 and 340 students
+                                        \item 21 teachers
                                 \end{itemize}
-                        \item Enseignements d'\textbf{informatique} :
+                        \item \textbf{Computer science} class:
                                 \begin{itemize}
-                                        \item Algorithmique
+                                        \item Algorithm
                                         \item C
                                         \item Java
                                 \end{itemize}
@@ -375,61 +363,69 @@
 }
 
 \frame{
-        \frametitle{Les effets bénéfiques de MarkUs}
-        \begin{block}{Côté étudiants :}
+        \frametitle{Advantages of MarkUs}
+        \begin{block}{Student side:}
                 \begin{itemize}
-                        \item Effet pédagogique du \textbf{respect des dates limites}
-                        \item Chaque \textbf{individu} accède à la correction du travail de son groupe
-                        \item \textbf{Consultation accrue} des corrections laissées par les enseignants
+                        \item Pedagogical effect of \textbf{reaching deadlines}
+                        \item \textbf{Individual access} to the graded work of his group
+                        \item \textbf{More consultation} of the annotations left by teachers
                 \end{itemize}
         \end{block}
 }
 
 \frame{
-        \frametitle{Les effets bénéfiques de MarkUs}
-        \begin{block}{Côté enseignants :}
+        \frametitle{Advantages of MarkUs}
+        \begin{block}{Teacher side:}
                 \begin{itemize}
-                        \item Meilleure gestion \textbf{logistique}
-                        \item Une première \textbf{uniformisation} des critères de correction
-                        \item Aspect \textbf{incitatif} de la correction
+                        \item Improved \textbf{logistics} management
+                        \item An initial \textbf{standardization} of criteria
+                        \item \textbf{Incentive} effect for the correction
                 \end{itemize}
         \end{block}
 }
+
+\section{MarkUs deployment}
 
 \frame{
-        \frametitle{Quelques leçons empiriques}
-        \begin{block}{Recommandations techniques et organisationnelles}
+        \frametitle{Around MarkUs}
+        \begin{block}{Practical modalities}
                 \begin{itemize}
-                        \item Attention à la \textbf{charge} du serveur lors de la conversion des documents .pdf
-                        \item Assurer un \textbf{accompagnement} minimal des enseignants
-                        \item Rôle du responsable de matière, sorte de \textbf{chef d'orchestre} de l'utilisation de la plate-forme
+                        \item Written in Ruby, with Ruby on Rails
+                        \item Documents saved with subversion
+                        \item Access through a web interface
+                        \item Expert users: access using CLI and REST API
+                \end{itemize}
+        \end{block}
+        
+        \begin{block}{Try it!}
+                \begin{itemize}
+                        \item Virtual machine: already configured MarkUs instance
                 \end{itemize}
         \end{block}
 }
 
-
-\subsection*{Contributions passées et à venir}
 
 \section{Conclusion}
 
-\subsection*{Bilan intermédiaire}
+
+\subsection*{Bilan}
 
 \frame
 {
         \frametitle{Synthèse}
 
-        \begin{alertblock}{Objectif}
-                Comment améliorer la procédure d'évaluation des TP/projets d'étudiants ?
+        \begin{alertblock}{MarkUs, an online marking tool to annotate student's code}
+                How to improve evaluation process in practical work or student's projects?
         \end{alertblock}
 
-        \begin{block}{Usage de MarkUs}
-
+        \begin{block}{MarkUs}
                 \begin{itemize}
-                        \item Logiciel \textbf{libre}
-                        \item Annotation du \textbf{code}, des \textbf{.pdf} et des \textbf{images}
-                        \item Facilité de prise en main
-                        \item Seul coût : installation et maintenance
-                        \item Vers la création de \textbf{cercles vertueux} : utilisateurs $\rightarrow$ contributeurs $\rightarrow$ mentors
+                        \item Free software
+                        \item Annotation of \textbf{source code}, \textbf{images} and \textbf{PDF}
+                        \item Easy to use
+                        \item Only cost: installation and maintenance
+                        \item Usage popular with students and teachers
+%                        \item Vers la création de \textbf{cercles vertueux} : utilisateurs $\rightarrow$ contributeurs $\rightarrow$ mentors
                 \end{itemize}
         \end{block}
 }
@@ -437,31 +433,34 @@
 \subsection*{Perspectives}
 
 \frame{
-        \frametitle{Améliorations à venir}
+        \frametitle{Next features}
 
-        \begin{block}{Vers un élargissement de l'utilisation de MarkUs}
+        \begin{block}{Extend the use of MarkUs}
                 \begin{itemize}
-                        \item Analyse plus fine des effets du dispositif pédagogique
-                        \item Module d'\textbf{annotation tactile}
-                        \item Élargissement à d'autres matières
-                        \item Intégration à un \textbf{ENT} ?
+%                        \item Analyse plus fine des effets du dispositif pédagogique
+                        \item \textbf{Tactile annotation} module
+                        \item Integration of \textbf{mathematical annotations}
+                        \item \textbf{Automated testing} of student's code
+                        \item Extend MarkUs to other courses
+                        \item Integration to a \textbf{VLE}\footnote{Virtual Learning Environment} ?
+                        \item Easy deployment using virtual machines
                 \end{itemize}
         \end{block}
 }
 
-\subsection*{Références}
+\subsection*{References}
 
 \frame{
-        \frametitle{Plus d'informations}
+        \frametitle{More information}
 
-        \begin{block}{Liens et contacts}
+        \begin{block}{Links and contacts}
                 \begin{itemize}
-                        \item Site du projet : \url{http://markusproject.org}
-                        \item Essayer le logiciel en ligne : \url{http://markusproject.org/admin-demo}
-                        \item Sources : \url{https://github.com/MarkUsProject/Markus}
-                        \item Blog EAT-TICE de l'Ecole Centrale de Nantes : \url{http://eat-tice.ec-nantes.fr}
-                        \item Chan IRC : \#markus sur irc.freenode.net
-                        \item Mailing list : \url{markus-dev@cs.toronto.edu}
+                        \item Project website: \url{http://markusproject.org}
+                        \item Try it online: \url{http://demo.markusproject.org}
+                        \item GitHub repository: \url{https://github.com/MarkUsProject/Markus}
+                        \item Blog EAT-TICE of the École Centrale de Nantes: \url{http://eat-tice.ec-nantes.fr}[FR]
+                        \item IRC channel: \#markus sur irc.freenode.net
+                        \item Mailing list: \url{markus-dev@markusproject.org}
                 \end{itemize}
         \end{block}
 }
